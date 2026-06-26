@@ -428,6 +428,16 @@
   @media (max-width:820px){ .trust-grid{ grid-template-columns:1fr; gap:14px; } }
   @media (max-width:600px){ .trust{ padding:40px 0; } }
 
+  /* ===== Review avatars ===== */
+  .tavatar, .ravatar{ width:42px; height:42px; border-radius:50%; flex:0 0 auto; background:linear-gradient(180deg,#c9a24b,#a3792c); color:#fff; font-family:var(--serif); font-size:20px; font-weight:600; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 8px rgba(120,90,40,.3); }
+  .tavatar svg, .ravatar svg{ width:22px; height:22px; fill:#fff; }
+  .trust-grid .tperson{ display:flex; align-items:center; gap:12px; margin-top:16px; padding-top:14px; border-top:1px solid var(--line); }
+  .trust-grid .tmeta{ display:flex; flex-direction:column; line-height:1.35; }
+  .trust-grid .tmeta b{ font-size:14px; color:var(--ink); font-weight:600; }
+  .trust-grid .tmeta span{ font-size:11.5px; color:var(--muted); letter-spacing:.5px; }
+  .review .rwho{ display:flex; align-items:center; gap:12px; }
+  .review .rwho .rmeta{ display:flex; flex-direction:column; }
+
   /* ===== Reduced motion ===== */
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{ animation:none !important; transition:none !important; }
@@ -550,17 +560,17 @@
       <blockquote>
         <div class="tstars">★★★★★</div>
         <p class="tq">Neat &amp; clean rooms, a great location near the temple, and very cooperative staff — especially Mr Rajiv Gupta.</p>
-        <cite><b>Jaideep B.</b> · TripAdvisor</cite>
+        <div class="tperson"><span class="tavatar">J</span><span class="tmeta"><b>Jaideep B.</b><span>TripAdvisor</span></span></div>
       </blockquote>
       <blockquote>
         <div class="tstars">★★★★★</div>
         <p class="tq">Excellent service from Raju Gupta and Deeksha Tiwari — clean room, good service and polite behaviour.</p>
-        <cite><b>Verified Guest</b> · TripAdvisor</cite>
+        <div class="tperson"><span class="tavatar"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v1h18v-1c0-3.5-4-6-9-6Z"/></svg></span><span class="tmeta"><b>Verified Guest</b><span>TripAdvisor</span></span></div>
       </blockquote>
       <blockquote>
         <div class="tstars">★★★★<span class="dim">★</span></div>
         <p class="tq">Conveniently located, about a 10-minute walk to Ram Janmabhoomi, with many restaurants nearby.</p>
-        <cite><b>Verified Guest</b> · TripAdvisor</cite>
+        <div class="tperson"><span class="tavatar"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v1h18v-1c0-3.5-4-6-9-6Z"/></svg></span><span class="tmeta"><b>Verified Guest</b><span>TripAdvisor</span></span></div>
       </blockquote>
     </div>
   </div>
@@ -681,19 +691,19 @@
         <div class="qmark">&ldquo;</div>
         <div class="rstars">★★★★★</div>
         <p class="rtext">Situated in the heart of the city — religious places &amp; market nearby. A nice place to stay. Neat &amp; clean rooms with an in-house pantry, and good, cooperative staff — especially Mr Rajiv Gupta.</p>
-        <div class="rwho"><b>Jaideep B.</b><span>Verified review · TripAdvisor</span></div>
+        <div class="rwho"><span class="ravatar">J</span><div class="rmeta"><b>Jaideep B.</b><span>Verified review · TripAdvisor</span></div></div>
       </div>
       <div class="review reveal">
         <div class="qmark">&ldquo;</div>
         <div class="rstars">★★★★★</div>
         <p class="rtext">Excellent service from Raju Gupta and Deeksha Tiwari. Clean room, good service and polite behaviour, with tourist places close by.</p>
-        <div class="rwho"><b>Verified Guest</b><span>Verified review · TripAdvisor</span></div>
+        <div class="rwho"><span class="ravatar"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v1h18v-1c0-3.5-4-6-9-6Z"/></svg></span><div class="rmeta"><b>Verified Guest</b><span>Verified review · TripAdvisor</span></div></div>
       </div>
       <div class="review reveal">
         <div class="qmark">&ldquo;</div>
         <div class="rstars">★★★★★</div>
         <p class="rtext">Ram Mandir is just about 100 metres&rsquo; walking distance. If you&rsquo;re visiting, do stay here — the luxury room was neat and clean.</p>
-        <div class="rwho"><b>Verified Guest</b><span>Verified review · TripAdvisor</span></div>
+        <div class="rwho"><span class="ravatar"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v1h18v-1c0-3.5-4-6-9-6Z"/></svg></span><div class="rmeta"><b>Verified Guest</b><span>Verified review · TripAdvisor</span></div></div>
       </div>
     </div>
     <div class="center" style="margin-top:42px">
